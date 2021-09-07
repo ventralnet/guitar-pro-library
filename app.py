@@ -1,6 +1,6 @@
 import click
 
-from commands import CreateDatabaseCommand
+from commands.create_database_command import CreateDatabaseCommand
 
 # @click.command()
 # @click.option('--count', default=1, help='Number of greetings.')
