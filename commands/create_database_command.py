@@ -1,3 +1,5 @@
+import click
+
 from commands.base_command_interface import BaseCommandInterface
 from commands.command_context_exception import CommandContextException
 
