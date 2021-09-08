@@ -17,10 +17,10 @@ TAB_TABLE_SCHEMA = '''
 
 class CreateDatabaseCommand(BaseCommandInterface):
   def execute(self, context):
-    if (not context.connection):
+    connection = context['connection']
+    if (not connection):
       raise CommandContextException("CreateDatabaseCommand failed, no connection found on context")
 
-    connection = context.connection
     cursor = connection.cursor()
     cursor.execute(TAB_TABLE_SCHEMA)
     

@@ -3,6 +3,7 @@ from unittest.mock import Mock
 
 from commands.drop_database_command import DropDatabaseCommand, DROP_TABLE
 from commands.command_context_exception import CommandContextException
+
 class TestCreateDatabaseCommand(unittest.TestCase):
   def setUp(self) -> None:
     self.command = DropDatabaseCommand()
