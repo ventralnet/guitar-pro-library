@@ -6,12 +6,13 @@ from commands.command_context_exception import CommandContextException
 # relative_path, md5sum, meta_name, meta_artist, meta_album, meta_comments
 TAB_TABLE_SCHEMA = '''
   CREATE TABLE IF NOT EXISTS tabs (
-    id INTEGER PRIMARY KEY,
     md5sum character(32) NOT NULL,
+    file_path varchar NOT NULL,
     meta_name varchar NULL,
     meta_artist varchar NULL,
     meta_album varchar NULL,
-    meta_comments TEXT NULL
+    meta_comments TEXT NULL,
+    PRIMARY KEY(md5sum, file_path)
   )
 '''
 
